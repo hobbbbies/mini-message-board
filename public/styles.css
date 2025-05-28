@@ -81,6 +81,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    justify-self: center;
+
 }
 
 .message-board-item div:first-child {
@@ -137,4 +139,24 @@ button:hover, button:focus {
     background: var(--main-blue);
     color: var(--white);
     border: 1px solid var(--white);
+}
+
+.open-link {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 6px 16px;
+    background: var(--white);
+    color: var(--main-blue);
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+    transition: background 0.2s, color 0.2s;
+    border: 1px solid var(--main-blue);
+    cursor: pointer;
+}
+
+.open-link:hover, .open-link:focus {
+    background: var(--main-blue);
+    color: var(--white);
 }

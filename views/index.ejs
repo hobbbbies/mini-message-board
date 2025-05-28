@@ -12,8 +12,9 @@
         <% for (let i = 0; i < messages.length; i++) { %>
                 <li class="message-board-item">
                     <div>User: <%= messages[i].user %></div>
-                    <div>Text: <%= messages[i].text %> </div>
-                    <div>added: <%= messages[i].added %></div>
+                    <div><%= messages[i].text %> </div>
+                    <div>On: <%= messages[i].added %></div>
+                    <a class="open-link" href="/message/<%= messages[i].user %>">Open</a>
                 </li>
             <% } %>
     </ul>

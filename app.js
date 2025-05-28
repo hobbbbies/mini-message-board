@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const path = require('node:path');
 const indexRouter = require('./routes/index');
+const messageRouter = require('./routes/message');
+const newRouter = require('./routes/new');
 const PORT = 8080;
 
 app.set("views", path.join(__dirname, "views"));
@@ -13,6 +15,8 @@ app.use(express.static(assetsPath));
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/", indexRouter);
+app.use("/message", messageRouter);
+app.use("/new", newRouter);
 
 app.listen(PORT, () => {
     console.log("Server started successfully on PORT: ", PORT);

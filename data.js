@@ -1,9 +1,13 @@
-exports.links = [
+function getMessageByUser(user) {
+  return messages.find((message) => message.user === user);
+}
+
+const links = [
     { href: "/", text: "Hub" },
-    { href: "new", text: "New Messages" }
+    { href: "/new", text: "New Messages" }
 ]
 
-exports.messages = [
+const messages = [
   {
     text: "Hi there!",
     user: "Amando",
@@ -15,3 +19,5 @@ exports.messages = [
     added: new Date()
   }
 ];
+
+module.exports = { getMessageByUser, links, messages };
