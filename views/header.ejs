@@ -1,0 +1,10 @@
+<header class="header">
+    <div><%= title %></div>
+    <nav id="navigation">
+        <% for(let i = 0; i < links.length; i++) { %>
+            <a class="link" href="<%= links[i].href %>">
+                <span ><%= links[i].text %></span>
+            </a>
+        <% } %>
+    </nav>
+</header>
