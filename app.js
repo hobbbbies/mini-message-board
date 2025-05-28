@@ -4,7 +4,7 @@ const path = require('node:path');
 const indexRouter = require('./routes/index');
 const messageRouter = require('./routes/message');
 const newRouter = require('./routes/new');
-const PORT = 8080;
+const PORT = process.env.PORT || 3000;
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
